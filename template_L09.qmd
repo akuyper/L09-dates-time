@@ -2,18 +2,23 @@
 title: "L09 Dates & Time"
 subtitle: "Data Science 1 with R (STAT 301-1)"
 author: "YOUR NAME"
+pagetitle: "L09 YOUR NAME"
 
 format:
   html:
     toc: true
+    toc-depth: 4
+    toc-location: left
     embed-resources: true
-    code-fold: show
+    code-fold: false
     link-external-newwindow: true
 
 execute:
   warning: false
-  
-from: markdown+emoji 
+
+from: markdown+emoji
+reference-location: margin
+citation-location: margin  
 ---
 
 ::: {.callout-tip icon=false}
@@ -41,7 +46,6 @@ You should always begin by loading all necessary packages towards the beginning 
 
 ```{r}
 #| label: load-pkgs
-#| code-fold: false
 
 # Loading package(s)
 
@@ -49,10 +53,10 @@ You should always begin by loading all necessary packages towards the beginning 
 
 ## Datasets 
 
-We will be utilizing a modified version the familiar `flights` dataset from `nycflights13` for all exercises involving variables associated with `flights` (see `?flights` for documentation).
+We will be utilizing a modified version the familiar `flights` dataset from `nycflights13` for all exercises involving variables associated with `flights` (see `?flights` for documentation). That is, we won't be using `flights`, we will be using the modified version called `flights_dt` which was created in [Chapter 18 Dates and times](https://r4ds.hadley.nz/datetimes). 
 
-::: {.callout-note}
-You will need to use `flights_dt` which is built in [Chapter 18 Dates and times](https://r4ds.hadley.nz/datetimes).
+::: {.callout-important}
+Code to build `flights_dt` can be found in [Chapter 18 Dates and times](https://r4ds.hadley.nz/datetimes).
 :::
 
 ## Exercises
@@ -76,7 +80,6 @@ What happens if you try to parse a string that contains invalid dates, like this
 
 ```{r}
 #| label: ex-01
-#| code-fold: false
 #| eval: false
 
 # invalid string example
@@ -96,7 +99,6 @@ Use the appropriate `lubridate` function to parse each of the following dates:
 
 ```{r}
 #| label: ex-02
-#| code-fold: false
 #| eval: false
 
 # dates to parse
@@ -156,7 +158,7 @@ YOUR SOLUTION HERE
 Create a tibble with 3 variables containing the following:
 
 1. every month in a year (i.e., `"January"`),
-2. the date of the first day of every month (i.e., `"2022-01-01"`), and 
+2. the date of the first day of each month (i.e., `"2025-01-01"`), and 
 3. the day of the week that each first day falls on (i.e., `"Tuesday"`). 
 
 ::: {.callout-tip icon="false"}
@@ -167,6 +169,15 @@ YOUR SOLUTION HERE
 :::
 
 ## Case Study
+
+::: {.callout-warning}
+
+The final product is meant for your boss and they expect your work to be clear, to the point, and presentable! They don't care about code so it shouldn't be visible or even accessible. 
+
+Make your graphic(s) look nice. Appropriate summary statistics should be displayed as a table.
+
+:::
+
 
 Use the `tinder_data` file in the `data/` subdirectory to complete the following tasks.^[This dataset was sourced from [Swipestats.io](https://www.swipestats.io/).] 
 

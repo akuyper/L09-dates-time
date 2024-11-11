@@ -1,9 +1,9 @@
-# L09 - dates and time ----
+# L09: dates and time ----
 # Stat 301-1
 
-## load packages ----
+# load packages ----
 
 
-## Exercises ----
+# Exercises ----
 
-### Ex 1 ----
+## Ex 1 ----
