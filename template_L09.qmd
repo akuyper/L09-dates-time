@@ -53,10 +53,10 @@ You should always begin by loading all necessary packages towards the beginning 
 
 ## Datasets 
 
-We will be utilizing a modified version the familiar `flights` dataset from `nycflights13` for all exercises involving variables associated with `flights` (see `?flights` for documentation). That is, we won't be using `flights`, we will be using the modified version called `flights_dt` which was created in [Chapter 18 Dates and times](https://r4ds.hadley.nz/datetimes). 
+We will be utilizing a modified version of the familiar `flights` dataset from `nycflights13` for all exercises involving variables associated with `flights` (see `?flights` for documentation). That is, we won't be using `flights`, we will be using the modified version called `flights_dt` which was created in [Chapter 17 Dates and times](https://r4ds.hadley.nz/datetimes). 
 
 ::: {.callout-important}
-Code to build `flights_dt` can be found in [Chapter 18 Dates and times](https://r4ds.hadley.nz/datetimes).
+Code to build `flights_dt` can be found in [Chapter 17 Dates and times](https://r4ds.hadley.nz/datetimes).
 :::
 
 ## Exercises
@@ -79,7 +79,7 @@ YOUR SOLUTION HERE
 What happens if you try to parse a string that contains invalid dates, like this one?
 
 ```{r}
-#| label: ex-01
+#| label: ex-02
 #| eval: false
 
 # invalid string example
@@ -98,7 +98,7 @@ YOUR SOLUTION HERE
 Use the appropriate `lubridate` function to parse each of the following dates:
 
 ```{r}
-#| label: ex-02
+#| label: ex-03
 #| eval: false
 
 # dates to parse
@@ -143,7 +143,7 @@ YOUR SOLUTION HERE
 
 ### Exercise 6
 
-On what day of the week should you leave if you want to minimize the chance of a delay?
+On what day of the week should you leave if you want to minimize the chance of a delay? Explain why.
 
 ::: {.callout-tip icon="false"}
 ## Solution
@@ -181,9 +181,9 @@ Make your graphic(s) look nice. Appropriate summary statistics should be display
 
 Use the `tinder_data` file in the `data/` subdirectory to complete the following tasks.^[This dataset was sourced from [Swipestats.io](https://www.swipestats.io/).] 
 
-1. Describe the distribution of `age_current` on Tinder (calculated from the current date to their birth date). We typically express age in years, round down to the nearest whole number.
-2. Describe the distribution of `age_joined` on Tinder (calculated from `user_create_date` and `user_birth_date`). We typically express age in years, round down to the nearest whole number.
-3. Which distribution do you believe is a more accurate representation of user age and why?
+1. Create a variable called `age_current` which is the difference between the current date and the `user_birth_date`. We typically express age in years, round down to the nearest whole number.
+2. Create a variable called `age_joined` which is the difference between `user_create_date` and `user_birth_date`. We typically express age in years, round down to the nearest whole number.
+3. Describe the distribution of user age on Tinder. Explain which variable you choose to use and why.
 
 ::: {.callout-tip icon="false"}
 ## Solution
@@ -200,7 +200,7 @@ Graduate students are required to complete this challenge. **It is optional for 
 
 :::
 
-For the case study above, convert the variables you created (`age_current` or `age_joined`) into a binned variable that is an ordered factor. Describe the distribution of user age using these new binned variable. Are your conclusions the same or different from your previous analysis.
+For the case study above, convert the variable you use to describe the distribution of user age (`age_current` or `age_joined`) into a binned variable that is an ordered factor. Describe the distribution of user age using this new binned variable. Are your conclusions the same or different from your previous analysis.
 
 ::: {.callout-tip icon="false"}
 ## Solution
